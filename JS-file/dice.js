@@ -23,7 +23,7 @@ document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
 
 if (randomNumber1 > randomNumber2) {
-  document.getElementById("title-header").innerHTML = "Play 1 Wins!";
+  document.getElementById("title-header").innerHTML = "Player 1 Wins!";
 }
 else if (randomNumber1 < randomNumber2) {
   document.getElementById("title-header").innerHTML = "Player 2 Wins!";
