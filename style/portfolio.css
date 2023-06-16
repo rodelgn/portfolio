@@ -210,11 +210,14 @@ hr {
   }
 
   .objective-card h2 {
-    font-size: 22px;
+    font-size: 29px;
+  }
+  .name-card h1 {
+    font-size: 32px;
   }
 
   .delImage {
-    width: 50%;
+    width: 58%;
   }
 
   /*Project Display Page*/
