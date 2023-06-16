@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="icon" href="../img/rr-favicon.ico">
+    
+    <style>
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#title-header {
+  text-align: left;
+  font-size: 32px;
+  font-family: 'Sacramento', cursive;
+  color: #222831;
+}
+    /*Work Skill Section*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+.skills-section {
+    width: 100%;
+    height: 80vh;
+    padding: 0px 13%;
+    background-color: rgba(0, 0, 0, 0.082);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills-head {
+    width: 100%;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.skills_main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skills_main .skill_bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2) {
+    font-weight: 500;
+}
+.skill_bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #54B435;
+    border-radius: 25px;
+}
+.skill_bar .bar .html{
+    width: 85%;
+    animation: html 2s;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }100%{
+        width: 85%;
+    }
+}
+.skill_bar .bar .css{
+    width: 75%;
+    animation: css 2s;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 75%;
+    }
+}
+.skill_bar .bar .sass{
+    width: 1%;
+    animation: sass 2s;
+}
+@keyframes sass {
+    0%{
+        width: 0%;
+    }100%{
+        width: 1%;
+    }
+}
+.skill_bar .bar .js{
+    width: 50%;
+    animation: js 2s;
+}
+@keyframes js {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+.skill_bar .bar .react{
+    width: 0%;
+    animation: react 2s;
+}
+@keyframes react {
+    0%{
+        width: 0%;
+    }100%{
+        width: 0%;
+    }
+}
+.skill_bar .bar .node{
+    width: 0%;
+    animation: node 2s;
+}
+@keyframes node {
+    0%{
+        width: 0%;
+    }100%{
+        width: 0%;
+    }
+}
+.skill_bar .bar .express{
+    width: 0%;
+    animation: express 2s;
+}
+@keyframes express {
+    0%{
+        width: 0%;
+    }100%{
+        width: 0%;
+    }
+}
+.skill_bar .bar .mongo{
+    width: 0%;
+    animation: mongo 2s;
+}
+@keyframes mongo {
+    0%{
+        width: 0%;
+    }100%{
+        width: 0%;
+    }
+}
+  </style>
+
+    <title>Skills</title>
+</head>
+<body>
+  <header>
+      <nav>
+        <div class="navigation-bar">
+          <ul class="nav-menu" id="nav-bar">
+            <li id="toggle"><a class="icon" onclick="navFunction()">&#9776;</a></li>
+            <li class="home"><a href="../index.html">Home</a></li>
+            <li class="item"><a href="../pages/workExp.html">Experience</a></li>
+            <li class="item"><a href="../pages/skills.html">Skills</a></li>
+            <li class="item"><a href="../pages/projects.html">Mini Projects</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+
+<section>
+  <article>
+    <div class="skills-section">
+      <div class="skills-head">
+        <h1 id="title-header">Skills</h1>
+          <hr>
+      </div>
+
+      <div class="skills_main">
+          <div class="skill_bar">
+              <div class="info">
+                  <p>HTML</p>
+                  <P>85%</P>
+              </div>  
+              <div class="bar">
+                  <span class="html"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>CSS</p>
+                  <P>75%</P>
+              </div>
+              <div class="bar">
+                  <span class="css"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>SASS</p>
+                  <P>1%</P>
+              </div>
+              <div class="bar">
+                  <span class="sass"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Java Script</p>
+                  <P>50%</P>
+              </div>
+              <div class="bar">
+                  <span class="js"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>React js</p>
+                  <P>0%</P>
+              </div>
+              <div class="bar">
+                  <span class="react"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Node js</p>
+                  <P>0%</P>
+              </div>
+              <div class="bar">
+                  <span class="node"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Express js</p>
+                  <P>0%</P>
+              </div>
+              <div class="bar">
+                  <span class="express"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Mongo DB</p>
+                  <P>00%</P>
+              </div>
+              <div class="bar">
+                  <span class="mongo"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </article>
+
+</section>
+
+<footer>
+  <div id="ftr-sec">
+    <p>Rodel Nercuit 2023 © </p>
+  </div>
+</footer>
+
+<script src="../JS-file/portfolio.js"></script>
+
+</body>
+</html>

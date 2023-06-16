@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="icon" href="../img/rr-favicon.ico">
+    
+  <style>
+/*Work Experience & Education Page*/
+#title-header {
+  margin: 2rem;
+  margin-left: 6rem;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Sacramento', cursive;
+  color: #222831;
+}
+/*Work Experience Section*/
+#main-container {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 2rem;
+  flex-flow: column wrap;
+}
+.company-box {
+  width: 50%;
+  padding: 2rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  line-height: 1.8;
+  text-align: left;
+  box-shadow: 1px 1px 1rem #393E46;
+}
+.company-box h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Sacramento', cursive;
+  color: #222831;
+}
+.company-box h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: #222831;
+}
+
+.company-box p {
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #222831;
+}
+.company-box li {
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #222831;
+}
+
+.data-img, .qa-img {
+  float: left;
+  padding-right: 1rem;
+}
+.skill-img, .header-img {
+  float: left;
+  padding-right: 2rem;
+}
+  </style>
+    <title>Work Experience</title>
+
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="navigation-bar">
+          <ul class="nav-menu" id="nav-bar">
+            <li id="toggle"><a class="icon" onclick="navFunction()">&#9776;</a></li>
+            <li class="home"><a href="../index.html">Home</a></li>
+            <li class="item"><a href="../pages/workExp.html">Experience</a></li>
+            <li class="item"><a href="../pages/skills.html">Skills</a></li>
+            <li class="item"><a href="../pages/projects.html">Mini Projects</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+
+     <section>
+        <h1 id="title-header">Experience</h1>
+        
+        <div id="main-container">
+            <div class="company-box">
+                <h2>NovAlly Leaps and Bounds Services</h2>
+                <h3>Campaign Planner Associate (Engage) April 2022 - February 2023</h3>
+                <img class="data-img" src="../img/task.png" alt="data-management-computer">
+                <ul>
+                    <li>Handles daily updates to Engage and Convert Master</li>
+                    <li>Import/Upload leads to Salesloft & Integrate</li>
+                    <li>Sets up campaign folders, templates and Asana projects for Engage & Convert campaigns</li>
+                    <li>Engage Campaign Setup</li>
+                    <li>Engage Converter Setup (Salesloft)</li>
+                </ul>
+                <br>
+
+                <h3>Lead Quality Control Analysts December 2017 - April 2022</h3>
+                <img class="qa-img" src="../img/quality-assurance.png" alt="quality assurance">
+                <ul>
+                    <li>Responsible for analyzing the quality of the leads generated from our call center associates.</li>
+                    <li>Monitor the quality of leads and email validity to assess associates performance, technical accuracy and conformity to client's requirement and company guidelines and policies.</li>
+                    <li>Assist in developing, creating and implementing call center quality processes and procedures, as well as ensuring leads are submitted on time needed for the client's target and to enhance the overall company client services.</li>
+                </ul>
+            </div>
+            
+
+            <div class="company-box">
+                <h2>Keller Williams Real Estate</h2>
+                <h3>Virtual Assistant July 2016 - November 2017</h3>
+                <img class="header-img" src="../img/laptop.png" alt="laptop logo">
+                <p>Responsibilites</p>
+                <ul>
+                  <li>Gathers data from the County Website of the Client</li>
+                  <li>Handles the list of data from the Google sheets</li>
+                </ul>
+            </div>
+            
+
+            <div class="company-box">
+                <h2>Callbox Sales and Marketing Solution</h2>
+                <h3>SEO (Search Engine Optimization) Specialist March 2015 - July 2016</h3>
+                <img class="skill-img" src="../img/seo.png" alt="seo logo">
+                <ul>
+                  <li>Develop optimization strategies that increase the company's search engine results rankings</li>
+                  <li>Monitor daily performance metrics in Google Analytics</li>
+                  <li>Monitor daily performance metrics in Google Webmaster Tools</li>
+                  <li>Building Backlinks</li>
+                  <li>Research SEO keywords to use throughout the company's website and marketing materials</li>
+                  <li>Update website including blog posts and page descriptions contents in WordPress</li>
+                  <li>Update content and website links for maximum optimization and search engine rankings</li>
+                  <li>Email Handling</li>
+                  <li>Email Marketing</li>
+                  <li>Social Media Marketing</li>
+                  <li>Lead Generation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+      <div id="ftr-sec">
+        <p>Rodel Nercuit 2023 © </p>
+      </div>
+    </footer>
+    <script src="../JS-file/portfolio.js"></script>
+</body>
+</html>

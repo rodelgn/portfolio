@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="icon" href="../img/rr-favicon.ico">
+    
+<style>
+  .dice-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+  .dice {
+    text-align: center;
+    display: inline-block;
+}
+
+#title-header {
+    margin: 30px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 5px 0 3px #9BABB8;
+    font-size: 8rem;
+    color: #222831;
+}
+
+#player1, #player2 {
+    font-size: 2rem;
+    color: #222831;
+    font-family: 'Indie Flower', cursive;
+}
+
+.img1, .img2 {
+    width: 80%;
+}
+
+button:hover {
+    color: #C2DEDC;
+    transition-delay: 0.1s;
+    background-color: #222831;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#restart-btn, #roll-btn {
+    height: 2rem;
+    width: 3.5rem;
+    border-radius: 10px;
+}
+
+</style>
+
+    <title>Dice Project</title>
+  </head>
+
+  <body>
+    
+    <header>
+      <nav>
+        <div class="navigation-bar">
+          <ul class="nav-menu" id="nav-bar">
+            <li id="toggle"><a class="icon" onclick="navFunction()">&#9776;</a></li>
+            <li class="home"><a href="../index.html">Home</a></li>
+            <li class="item"><a href="../pages/workExp.html">Experience</a></li>
+            <li class="item"><a href="../pages/skills.html">Skills</a></li>
+            <li class="item"><a href="../pages/projects.html">Mini Projects</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+  <section>
+    <div class="dice-container">
+
+      <h1 id="title-header">Play Dice</h1>
+
+        <div class="dice">
+        <p id="player1">Player 1</p>
+        <img class="img1" src="../img/dice6.png">
+        </div>
+
+        <div class="dice">
+        <p id="player2">Player 2</p>
+        <img class="img2" src="../img/dice6.png">
+        </div>
+
+        <div class="btn">
+        <button id="restart-btn" onClick="resetFunction()">Reset</button>
+        <button id="roll-btn" onClick="rollFunction()">Roll</button>
+        </div>
+    </div>
+
+  </section>
+
+    <footer>
+      <div id="ftr-sec">
+        <p>Rodel 🎲 Dice Game© 🎲</p>
+      </div>
+      
+    </footer>
+
+    <script type="text/javascript" src="../JS-file/dice.js"></script>
+  </body>
+</html>

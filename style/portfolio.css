@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 30px;
+  width: 10%;
+  border-style: dotted none none;
+  border-width: 10px;
+  color: #2F3032;
+}
+
+/*Navigation bar*/
+.navigation-bar {
+  margin: 0;
+  padding: 0;
+  background-color: #222831;
+}
+.nav-menu {
+  height: 100px;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nav-menu a {
+  font-size: 19px;
+  padding: 3px 6px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  color: #C2DEDC;
+}
+
+.nav-menu a:hover {
+  padding: 3px 6px;
+  box-shadow: 3px 5px 3px  #393E46;
+  background-color: #54B435;
+  color: #293462;
+  border-radius: 8px;
+  transition-duration: 0.3s;
+}
+
+#section-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.icon {
+  display: none;
+}
+
+
+/*Name card*/
+.name-card {
+  order: 1;
+  padding-right: 2rem;
+  width: auto;
+  flex: 0.5;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.delImage {
+  width: 90%;
+}
+
+.name-card h1 {
+  margin-top: 0.7em;
+  font-family: 'Sacramento', cursive;
+  font-size: 32px;
+  color: #222831;
+}
+
+.name-card h4 {
+  font-family: 'Sacramento', cursive;
+  font-size: 19px;
+  color: #222831;
+}
+
+.name-card p {
+  margin: auto;
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: #222831;
+}
+
+.dl-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+#download-cv img {
+  margin-left: 5px;
+}
+#download-cv {
+  padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 15px;
+  margin-top: 1em;
+  transition-duration: 0.3s;
+  background-color: #293462;
+  color: #54B435;
+}
+
+#download-cv:hover {
+  background-color: #54B435;
+  color: #293462;
+  transition-duration: 0.3s;
+}
+
+#linked-img img {
+  margin-top: 1.2rem;
+  border-radius: 100%;
+}
+
+/*Objective card*/
+
+.objective-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.objective-card h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 26px;
+  color: #222831;
+}
+
+.objective-card p {
+  font-family: 'Merriweather', serif;
+  margin: 2rem 2rem;
+  width: 80%;
+  font-size: 20px;
+  flex-shrink: 3;
+  line-height: 1.7;
+  color: #222831;
+}
+
+
+/*Footer Section*/
+
+#ftr-sec {
+  height: 100px;
+  padding-top: 2rem;
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#ftr-sec p {
+  color: #C2DEDC;
+  font-size: 11px;
+}
+
+/*Media Query*/
+@media (max-width: 768px) {
+
+  /*Display navigation bar when below 700px*/
+  .nav-menu a:not(.icon) {
+    display: none;
+  }
+  .nav-menu a.icon {
+    display: block;
+  }
+  .navigation-bar {
+    background-color: #222831;
+  }
+
+  #nav-bar {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #toggle {
+    flex: 1;
+  }
+
+  #section-container {
+    margin-top: 2rem;
+    flex-flow: column wrap;
+  }
+
+  .objective-card p {
+    font-size: 18px;
+  }
+
+  .objective-card h2 {
+    font-size: 22px;
+  }
+
+  .delImage {
+    width: 50%;
+  }
+
+  /*Project Display Page*/
+}
+
+@media (max-width: 768px) {
+
+    #nav-bar.responsive {
+      height: 300px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .nav-menu.responsive a {
+      display: block;
+    }
+}
