@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="icon" href="../img/rr-favicon.ico">
+
+    <style>
+        #title-header {
+          margin-top: 2rem;
+          margin-bottom: 3rem;
+          text-align: center;
+          font-size: 32px;
+          font-family: 'Sacramento', cursive;
+          color: #222831;
+        }
+        #project-cards {
+            margin-bottom: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .card {
+            width: 25%;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,.2);
+            background-color: #293462;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+            gap: 1.5rem;
+        }
+
+        .card img {
+          margin-top: 8px;
+        }
+        .card h3 {
+           color: #54B435;
+           border-bottom: 1px solid white;
+        }
+        .card p {
+          color: #54B435;
+          font-size: 17px;
+          width: 90%;
+          line-height: 1.3;
+        }
+
+        .card a {
+          text-align: center;
+          width: 37%;
+          text-decoration: none;
+          font-size: 20px;
+          transition-duration: 0.4s;
+          color: #EEE2DE;
+          padding: 3px 6px;
+          margin-bottom: 11px;
+          border: 1px solid #EEE2DE;
+          border-radius: 5px;
+        }
+
+        .card a:hover {
+          padding: 3px 6px;
+          background-color: #54B435;
+          color: #293462;
+          border-radius: 8px;
+          border: 1px solid #222831;
+          transition-duration: 0.3s;
+        }
+
+        @media screen and (max-width: 768px) {
+          #project-cards {
+            margin-bottom: 30px;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+          }
+          .card {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+          }
+          
+        }
+
+        @media screen and (min-width: 1300px) {
+          #project-cards {
+            height: 70vh;
+          }
+        }
+    </style>
+
+  <title>Projects</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <div class="navigation-bar">
+            <ul class="nav-menu" id="nav-bar">
+              <li id="toggle"><a class="icon" onclick="navFunction()">&#9776;</a></li>
+              <li class="home"><a href="../index.html">Home</a></li>
+              <li class="item"><a href="../pages/workExp.html">Experience</a></li>
+              <li class="item"><a href="../pages/skills.html">Skills</a></li>
+              <li class="item"><a href="../pages/projects.html">Mini Projects</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+    <section>
+        <article>
+          <h1 id="title-header">Mini Projects</h1>
+
+            <div id="project-cards">
+
+                <div class="card">
+                  <img src="../img/dice_64px.png" alt="dice logo">
+                  <h3>Dice Game</h3>
+                  <p>In this mini game it allows you to randomize Dice Numbers. Player 1 VS. Player 2</p>
+                  <a href="dice.html">try it!</a>
+                </div>
+      
+                <div class="card">
+                  <img src="../img/rock-paper-scissors.png" alt="work-in-progress logo">
+                  <h3>Rock, Paper, Scissor</h3>
+                  <p>In this mini game, you can choose either Rock, Paper or Scissor VS. Computer.</p>
+                  <a href="rps.html">try it!</a>
+                </div>
+
+                <div class="card">
+                  <img src="../img/work-in-progress.png" alt="work-in-progress logo">
+                  <h3>Pending Project</h3>
+                  <p>Future projects will be posted here.</p>
+                  <a href="#">try it!</a>
+                </div>
+
+            </div>
+        </article>
+    </section>
+    
+
+      <footer>
+        <div id="ftr-sec">
+          <p>Rodel Nercuit 2023 © </p>
+        </div>
+          
+      </footer>
+      
+      <script src="../JS-file/portfolio.js"></script>
+</body>
+</html>
