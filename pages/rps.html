@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="icon" href="../img/rr-favicon.ico">
+
+  <title>Virtual Rock, Paper, Scissors Game</title>
+  <style>
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #main-container {
+      height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .choice {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #eee;
+    }
+    
+    .selected {
+      background-color: #ffcc00;
+    }
+
+    .choice-img {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .result {
+      margin-top: 2rem;
+      font-weight: bold;
+      font-size: 22px;
+      height: 200px;
+      text-align: center;
+    }
+
+    #btns {
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #start-btn, #reset-btn {
+        font-size: 21px;
+        margin-top: 1rem;
+        border-radius: 6px;
+        padding: 3px 6px;
+        transition-duration: 0.3s;
+        background-color: #293462;
+        color: #54B435;
+    }
+
+    #start-btn:hover {
+        background-color: #54B435;
+        color: #293462;
+        transition-duration: 0.3s;
+    }
+    #reset-btn:hover {
+        background-color: #54B435;
+        color: #293462;
+        transition-duration: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      #main-container {
+        height: auto;
+      }
+
+      .result {
+        height: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="navigation-bar">
+        <ul class="nav-menu" id="nav-bar">
+          <li id="toggle"><a class="icon" onclick="navFunction()">&#9776;</a></li>
+          <li class="home"><a href="../index.html">Home</a></li>
+          <li class="item"><a href="../pages/workExp.html">Experience</a></li>
+          <li class="item"><a href="../pages/skills.html">Skills</a></li>
+          <li class="item"><a href="../pages/projects.html">Mini Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <h1>Virtual Rock-Paper-Scissors</h1>
+
+  <div id="main-container">
+    <div class="choice" onclick="selectOption('rock')" id="rock">
+      <img class="choice-img" src="../img/fist.png" alt="Rock">
+    </div>
+    <div class="choice" onclick="selectOption('paper')" id="paper">
+      <img class="choice-img" src="../img/high-five.png" alt="Paper">
+    </div>
+    <div class="choice" onclick="selectOption('scissors')" id="scissors">
+      <img class="choice-img" src="../img/scissors.png" alt="Scissors">
+    </div>
+  </div>
+  <div id="btns">
+    <button id="start-btn" onclick="startGame()">Start Game</button>
+    <button id="reset-btn" onclick="resetGame()">Reset</button>
+  </div>
+  <div class="result"></div>
+
+  <footer>
+    <div id="ftr-sec">
+      <p>Rodel Nercuit © Rock, Paper, Scissor</p>
+    </div>
+    
+  </footer>
+
+  <script>
+
+    //Navigation bar
+
+    function navFunction() {
+    var x = document.getElementById("nav-bar");
+    if (x.className === "nav-menu") {
+      x.className += " responsive";
+   } else {
+      x.className = "nav-menu";
+    }
+}
+
+  //start
+    var playerChoice;
+    var computerChoice;
+    var resultElement = document.querySelector('.result');
+
+    function selectOption(option) {
+      playerChoice = option;
+      resultElement.innerHTML = 'You selected ' + option;
+
+      // Remove highlight from all choices
+      var choices = document.querySelectorAll('.choice');
+      choices.forEach(function(choice) {
+        choice.classList.remove('selected');
+      });
+
+      // Add highlight to the selected choice
+      var selectedChoice = document.getElementById(option);
+      selectedChoice.classList.add('selected');
+    }
+
+    function startGame() {
+      if (playerChoice === undefined) {
+        resultElement.innerHTML = 'Please select an option first!';
+        return;
+      }
+
+      var choices = ['rock', 'paper', 'scissors'];
+      computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+      var result = '';
+      if (playerChoice === computerChoice) {
+        result = "It's a tie!";
+      } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        result = "You win!";
+      } else {
+        result = "Computer wins!";
+      }
+
+      resultElement.innerHTML = "You chose " + playerChoice + ". Computer chose " + computerChoice + ". " + result;
+    }
+
+    function resetGame() {
+      playerChoice = undefined;
+      computerChoice = undefined;
+      resultElement.innerHTML = '';
+      
+      // Remove highlight from all choices
+      var choices = document.querySelectorAll('.choice');
+      choices.forEach(function(choice) {
+      choice.classList.remove('selected');
+      });
+    }
+  </script>
+</body>
+</html>
