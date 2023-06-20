@@ -177,7 +177,6 @@ hr {
 
 /*Media Query*/
 @media (max-width: 768px) {
-
   /*Display navigation bar when below 700px*/
   .nav-menu a:not(.icon) {
     display: none;
@@ -186,18 +185,13 @@ hr {
     display: block;
   }
   .navigation-bar {
-    background-color: #222831;
+    background-color: #222831; 
   }
 
-  #nav-bar {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #toggle {
-    flex: 1;
+  .icon {
+    position: absolute;
+    left: 5px;
+    top: 26px;
   }
 
   #section-container {
@@ -225,14 +219,16 @@ hr {
 }
 
 @media (max-width: 768px) {
+    .nav-menu.responsive a {
+      display: block;
+    }
 
     #nav-bar.responsive {
       height: 300px;
       display: flex;
       flex-flow: column wrap;
-    }
-
-    .nav-menu.responsive a {
-      display: block;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 10px;
     }
 }
