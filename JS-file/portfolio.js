@@ -6,3 +6,7 @@ function navFunction() {
       x.className = "nav-menu";
     }
 }
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
