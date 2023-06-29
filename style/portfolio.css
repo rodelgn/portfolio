@@ -8,6 +8,7 @@ body {
   padding: 0;
   background-color: #EEEEEE;
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 hr {
   margin-top: 2rem;
