@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #EEEEEE;
+  background-color: #EEEEE3;
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
 }
@@ -106,13 +106,13 @@ hr {
 .dl-link {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 15px;
 }
+
 #download-cv img {
   margin-left: 5px;
 }
+
 #download-cv {
   padding: 8px;
   text-decoration: none;
@@ -131,8 +131,12 @@ hr {
 }
 
 #linked-img img {
+  border-radius: 80%;
   margin-top: 1.2rem;
-  border-radius: 100%;
+}
+
+#githubLogo img {
+  margin-top: 1.2rem;
 }
 
 /*Objective card*/
@@ -187,6 +191,7 @@ hr {
 }
 
 #ftr-sec p {
+  margin-top: 1.5em;
   color: #C2DEDC;
   font-size: 11px;
 }
