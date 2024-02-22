@@ -59,7 +59,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .icon {
@@ -79,6 +79,8 @@ hr {
 }
 .delImage {
   width: 90%;
+  box-shadow: 1px 1px 9px #393E46;
+  border-radius: 100%;
 }
 
 .name-card h1 {
@@ -146,6 +148,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 4em;
 }
 
 .objective-card h2 {
