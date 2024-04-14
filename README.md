@@ -1,2 +1,2 @@
 # Rodel-portfolio
-rodel's personal portfolio
+personal portfolio
